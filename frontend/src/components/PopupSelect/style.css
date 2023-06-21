@@ -1,0 +1,178 @@
+.popup-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0 0 0 / 53%);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+.popup-select {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    width: 80%;
+    height: 90%;
+    min-width: 750px;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 30px;
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popup-header h2 {
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.popup-btn {
+    display: inline-block;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+.service-btn {
+    color: white;
+    background: #001529;
+    margin-bottom: 24px;
+}
+
+.service-container {
+    position: relative;
+    margin-top: 25px;
+    height: calc(70% - 110px);
+}
+
+.services-wrapper {
+    height: 100%;
+    max-height: 240px;
+    overflow-y: scroll;
+}
+
+.service-wrapper.hide {
+    display: none;
+}
+
+.service-wrapper,
+.service-header {
+    display: grid;
+    grid-template-columns: 20% 15% 15% 15% 25% 10%;
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 0;
+}
+
+.service-wrapper div:last-child {
+    text-align: center;
+}
+
+.service-wrapper:hover {
+    background-color: #e7e5e5;
+}
+
+.service-wrapper .ant-input {
+    width: 80px;
+}
+
+.service-wrapper .tooltip {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.service-wrapper div:has(> .tooltip) {
+    position: relative;
+}
+
+.service-wrapper .tooltip+span {
+    display: none;
+    border: 1px solid #1DA57A;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 12px;
+    position: absolute;
+    background-color: white;
+    top: 24px;
+    left: 16px;
+    z-index: 4;
+}
+
+.service-wrapper .tooltip:hover {
+    text-decoration: none;
+}
+
+.service-wrapper .tooltip:hover+span {
+    display: inline-block !important;
+}
+
+.active-modal {
+    overflow: hidden;
+}
+
+.popup-footer,
+.cs-footer,
+.service-footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 10px 0;
+    padding-right: 15px;
+    position: absolute;
+}
+
+.service-footer,
+.cs-footer {
+    left: 0;
+    bottom: 0;
+}
+
+.cs-footer {
+    left: 0;
+}
+
+.popup-footer {
+    position: fixed !important;
+    left: 0;
+}
+
+.cs-container {
+    position: relative;
+    height: calc(30% + 110px);
+}
+
+.cs-header,
+.cs-wrapper {
+    padding: 0px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cs-wrapper>* {
+    width: calc(18% - 10px);
+}
+
+.cs-wrapper>*:last-child {
+    width: 32px;
+}
+
+.cs-header h3 {
+    width: calc(20% - 10px);
+    margin: 0;
+}
+
+.cs-list {
+    max-height: 160px;
+    overflow-y: scroll;
+}
