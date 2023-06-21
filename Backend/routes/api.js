@@ -14,11 +14,11 @@ const clientController = require("../controllers/clientController");
 
 // const leadController = require("../controllers/leadController");
 const productController = require("../controllers/productController");
-const rolecontroller = require("../controllers/rolecontroller");
+// const rolecontroller = require("../controllers/rolecontroller");
 const vendorController = require("../controllers/vendorController");
 const jobController = require("../controllers/jobController");
 const fileuploadController = require("../controllers/fileuploadController");
-const pincodeController = require("../controllers/pincodeController");
+// const pincodeController = require("../controllers/pincodeController");
 const ifscController = require("../controllers/ifscController");
 
 //__________CHECK IF REQUEST IS AUTHORIZED______________
@@ -39,8 +39,8 @@ router
 //list of admins ends here
 
 // Get Pincode
-router.route("/pincode/").get(catchErrors(pincodeController.getPicodeData));
-router.route("/ifsc/").get(catchErrors(ifscController.getifscData));
+// router.route("/pincode/").get(catchErrors(pincodeController.getPicodeData));
+// router.route("/ifsc/").get(catchErrors(ifscController.getifscData));
 
 //_____________ API for Vendors __________
 router.route("/vendor/create").post((req, res, next) => authPerm('vendor', 'create')(req, res, next), catchErrors(vendorController.create));
@@ -95,12 +95,12 @@ router
   );
 
 //_____________ API for roles __________
-router.route("/role/create").post((req, res, next) => authPerm('role', 'create')(req, res, next), catchErrors(rolecontroller.create));
-router.route("/role/read/:id").get((req, res, next) => authPerm('role', 'view')(req, res, next), catchErrors(rolecontroller.read));
-router.route("/role/update/:id").patch((req, res, next) => authPerm('role', 'update')(req, res, next), catchErrors(rolecontroller.update));
-router.route("/role/delete/:id").delete((req, res, next) => authPerm('role', 'delete')(req, res, next), catchErrors(rolecontroller.delete));
-router.route("/role/search").get((req, res, next) => authPerm('role', 'view')(req, res, next), catchErrors(rolecontroller.search));
-router.route("/role/list").get((req, res, next) => authPerm('role', 'view')(req, res, next), catchErrors(rolecontroller.list));
+// router.route("/role/create").post((req, res, next) => authPerm('role', 'create')(req, res, next), catchErrors(rolecontroller.create));
+// router.route("/role/read/:id").get((req, res, next) => authPerm('role', 'view')(req, res, next), catchErrors(rolecontroller.read));
+// router.route("/role/update/:id").patch((req, res, next) => authPerm('role', 'update')(req, res, next), catchErrors(rolecontroller.update));
+// router.route("/role/delete/:id").delete((req, res, next) => authPerm('role', 'delete')(req, res, next), catchErrors(rolecontroller.delete));
+// router.route("/role/search").get((req, res, next) => authPerm('role', 'view')(req, res, next), catchErrors(rolecontroller.search));
+// router.route("/role/list").get((req, res, next) => authPerm('role', 'view')(req, res, next), catchErrors(rolecontroller.list));
 
 //_____________ API for jobs _________
 router.route("/job/create").post((req, res, next) => authPerm('job', 'create')(req, res, next), catchErrors(jobController.create));
